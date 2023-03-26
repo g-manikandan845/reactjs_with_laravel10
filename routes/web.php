@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,3 +42,5 @@ Route::group([
 ], function(){
     Route::get('/test', [\App\Http\Controllers\TestController::class,'show']);
 });
+
+Route::resource('posts', PostController::class);
